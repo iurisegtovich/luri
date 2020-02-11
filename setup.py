@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="luri",
-    version="0.0.1",
+    version="0.0.2",
     author="iuri segtovich",
     author_email="iurisegtovich@gmail.com",
     description="lib iuri",

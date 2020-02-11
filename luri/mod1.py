@@ -2,6 +2,9 @@
 empty module1
 '''
 
+print('loading mod1')
+print('run "dir(mod1)" to see contents')
+
 class a:
     import numpy as np
     
@@ -61,7 +64,7 @@ class a:
     def _range(self,_slice):
         #print(_slice)
         start = _slice.start if _slice.start is not None else 0
-        stop = _slice.stop if _slice.stop is not None else -1
+        stop = _slice.stop if _slice.stop is not None else 1
         step = _slice.step if _slice.step is not None else 1
         #print(start,stop,step)
         return range(start,stop,step)
