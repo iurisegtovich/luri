@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="luri",
+    name="luri", #name that shows up on "pip list"
     version="0.0.2",
     author="iuri segtovich",
     author_email="iurisegtovich@gmail.com",

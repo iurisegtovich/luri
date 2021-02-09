@@ -3,24 +3,46 @@ lib_iuri (luri)
 
 ## installation:
 
-> quick:
+> quick (with git):
 
 pip install git+https://github.com/iurisegtovich/luri
+#pip list
+#luri                               0.0.2               
+#pip uninstall luri
 
-> without git
+> quick (without git)
 
 pip install https://github.com/iurisegtovich/luri/archive/master.zip
+#pip list
+#luri                               0.0.2               
+#pip uninstall luri
 
-> dev mode:
+> dev mode (git required):
 
-git clone https://github.com/iurisegtovich/luri
+git clone https://github.com/iurisegtovich/luri luri-master
 
-pip install -e ./luri
+pip install -e ./luri-master
+
+#pip list
+#>>> luri                               0.0.2               /home/segtovichisv/Desktop/luri-master
+#pip uninstall luri
+
+> or
+
+pip install -e git+https://github.com/iurisegtovich/luri#egg=luri_iurisegtovich
+#pip list
+#luri                               0.0.2               /home/segtovichisv/Desktop/projeto_xxx/src/luri-iurisegtovich
+#pip uninstall luri
+
+> from pypi test
+
+python -m pip install --index-url https://test.pypi.org/simple/luri-iurisegtovich
 
 ## usage
 
 > as a standalone program
 python -m luri
+#this is the name of the directory neighbor to setup.py, cointaining __init__.py and __main__.py; one might call it luri_pkg even though the setup name in setup.py and showing up in pip list is plain "luri"
 
 '''
 (base) segtovichisv@luos1604:/mnt/storage/github/luri_master$ python -m luri
