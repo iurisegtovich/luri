@@ -1,3 +1,6 @@
 luri.egg-info/
 luri/__pycache__/
 **.pyc
+build
+dist
+luri.egg-info

@@ -36,7 +36,9 @@ pip install -e git+https://github.com/iurisegtovich/luri#egg=luri_iurisegtovich
 
 > from pypi test
 
-python -m pip install --index-url https://test.pypi.org/simple/luri-iurisegtovich
+pip install -i https://test.pypi.org/simple/ luri
+#pip list
+#luri                               0.0.3               
 
 ## usage
 
@@ -91,4 +93,24 @@ from luri import test_aux [ok]
 
 
 
+## contribution
 
+> build
+	
+`$luri-master: python setup.py sdist bdist_wheel`
+
+> upload
+	
+prerequesite:
+
+`pip install twine`
+	
+`$luri-master: python -m twine upload --verbose  --repository-url https://test.pypi.org/legacy/ dist/*`
+
+note: cannot reupload the same version "error: File already exists."
+
+> clean
+
+`rm -rf luri.egg-info`
+`rm -rf dist`
+`rm -rf build`

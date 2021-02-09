@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="luri", #name that shows up on "pip list"
-    version="0.0.2",
+    version="0.0.4",
     author="iuri segtovich",
     author_email="iurisegtovich@gmail.com",
     description="lib iuri",
