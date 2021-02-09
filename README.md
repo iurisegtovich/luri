@@ -91,7 +91,31 @@ python -m luri.aux [ok]
 
 from luri import test_aux [ok]
 
+> conveniences
 
+```
+from luri.conveniences import mat
+
+M1 = mat("1,2,3;4,5,6") #call a with a string using commas and semicolons
+
+M2 = mat("""1 2 3 
+   ...:  4 5 6""") #call a with a multiline string using spaces and newlines
+   
+v= mat("1 3 8")    #forces into 2d line structure
+```
+
+```
+from luri.conveniences import seq
+
+seq1 = seq[20] similar sintax for scalar as sequence
+seq2 = seq[20,41,56,98] #discrete sequences
+seq3 = seq[20:60:2] #and logical sequences of ints
+seq4 = seq[:60:2] #start = 0
+seq5 = seq[20::2] #stop = 100
+seq6 = seq[20:60:] #step = 1
+
+first 2 return tuples, all logical return ranges
+```
 
 ## contribution
 
