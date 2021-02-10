@@ -1,6 +1,8 @@
 luri.egg-info/
 luri/__pycache__/
 **.pyc
+**.ipynb_checkpoints
 build
 dist
 luri.egg-info
+**nohup.out

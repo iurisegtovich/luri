@@ -31,7 +31,7 @@ pip install -e ./luri-master
 
 pip install -e git+https://github.com/iurisegtovich/luri#egg=luri_iurisegtovich
 #pip list
-#luri                               0.0.2               /home/segtovichisv/Desktop/projeto_xxx/src/luri-iurisegtovich
+#luri                               0.0.2               /home/segtovichisv/Desktop/project_xyz/src/luri-iurisegtovich
 #pip uninstall luri
 
 > from pypi test
@@ -96,12 +96,12 @@ from luri import test_aux [ok]
 ```
 from luri.conveniences import mat
 
-M1 = mat("1,2,3;4,5,6") #call a with a string using commas and semicolons
+M1 = mat%"1,2,3;4,5,6" #call a with a string using commas and semicolons
 
-M2 = mat("""1 2 3 
-   ...:  4 5 6""") #call a with a multiline string using spaces and newlines
+M2 = mat%"""1 2 3 
+   ...:  4 5 6""" #call a with a multiline string using spaces and newlines
    
-v= mat("1 3 8")    #forces into 2d line structure
+v= mat%"1 3 8"    #forces into 2d line structure
 ```
 
 ```

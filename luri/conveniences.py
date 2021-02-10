@@ -15,7 +15,7 @@ class mat:
 #        self=super().__new__(cls)
 #        return self
 
-    def __call__(self,arg):
+    def __mod__(self,arg):
         import numpy as np
         #print('obj(): called')
         #print(self.prop)
@@ -42,15 +42,24 @@ class mat:
         array = np.loadtxt(io.StringIO(string),ndmin=2)
         return array
     
+#in order to use variables in the convenience i would have to split each field and use  ast.literal_eval() with the caller namespace before sending into loadtxt
+#in order to compose like (see below) i would have check, after the eval, if the obj is a 1d or 2darray and split into elements for reparsing
+#like M = [line; line; 1, 2, 3]
+#or #like M = [line; line; [ 1, 2, 3 ] ]
+#or like M = [col, col, [1;2;3] ] 
+# or longline = [line, line, 1, 2, 3 ]
+#etc...
+#currently this is a convenience for quick number matrix e.g. copy from excel
+#maybe extend to use ast and to compose, or maybe create a advanced class emat()
 
 
 #%%singleton_ing
 mat=mat()
 #%%testing
 def testcall():
-  mat()
-  mat(None)
-  mat(1)
+  mat%()
+  mat%(None)
+  mat%(1)
   #a(:) #SyntaxError: invalid syntax
 #%%
 
@@ -66,14 +75,14 @@ M=mat._array("""
 
 print(M)
 
-M=mat("""
+M=mat%"""
         
 0.342717E-02  ,,,,,, 0.647191E-01
 ;;;;			\r\n\r\n
 ;	;; ; ; ;\n\n\n 
      ,		,,,
 0.647191E-01 0.201713E+01
-""")
+"""
 
 print(M)
 
