@@ -205,3 +205,5 @@ seq[8,]
 #Out[247]: [8]
 
 seq[8]
+
+from .conveniences_d.c_vis import vis
