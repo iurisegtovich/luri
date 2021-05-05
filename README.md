@@ -36,7 +36,7 @@ pip install -e git+https://github.com/iurisegtovich/luri#egg=luri_iurisegtovich
 
 > from pypi test
 
-pip install -i https://test.pypi.org/simple/ luri
+pip install -i https://test.pypi.org/simple/luri
 #pip list
 #luri                               0.0.3               
 

@@ -31,6 +31,19 @@ class mat:
     #> columns by space, comma, tab
     #> lines by ctrlR ctrlN semicolon;
     def _array(self,string):
+        
+        #remove [ and ] (ignore) to accept numpy prints (not reprs)
+        
+        string=string.replace('[',' ')
+        string=string.replace(']',' ')
+        
+        #lists of lists and tuple of tuple print with all commas and no line breaking
+        #so you can just np.array( str(lol) ) or np.array( str(tot) )
+        #as the repr(2darray( with is like 'array([[1, 2],\n       [3, 4]])'
+
+        #2darrays print with line breaking and no commas
+        
+        
         string=string.replace(';','\n')
         string=string.replace('\r\n','\n')
         
@@ -206,4 +219,4 @@ seq[8,]
 
 seq[8]
 
-from .conveniences_d.c_vis import vis
+#from .conveniences_d.c_vis import vis

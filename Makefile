@@ -16,3 +16,13 @@ clean:
 	rm -rf luri.egg-info
 	rm -rf dist
 	rm -rf build
+
+version:
+	#run tests
+	#update changelog.md
+	#change version num in setup.py
+	#git commit -F changelog.md
+	#git push origin master
+	#build bdist_wheel
+	#upload to pypi
+	
