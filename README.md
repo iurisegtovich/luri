@@ -29,9 +29,10 @@ pip install -e ./luri-master
 
 > or
 
-pip install -e git+https://github.com/iurisegtovich/luri#egg=luri_iurisegtovich
+#@/path/to/projct_xyz
+pip install -e git+https://github.com/iurisegtovich/luri#egg=luri
 #pip list
-#luri                               0.0.2               /home/segtovichisv/Desktop/project_xyz/src/luri-iurisegtovich
+#luri                               0.0.2               /home/segtovichisv/Desktop/project_xyz/src/luri
 #pip uninstall luri
 
 > from pypi test
