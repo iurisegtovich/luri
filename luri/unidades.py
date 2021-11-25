@@ -6,6 +6,9 @@ from luri import unidades
 from luri.unidades import dado, adimensional, unidade, calc
 '''
 from sympy.parsing.sympy_parser import parse_expr
+import sympy
+from sympy import powdenest
+
 
 class escalar(): 
     def __init__(self,x,u):
@@ -116,7 +119,7 @@ class escalar():
         return other
 
     def cancel_unidades(self,unidades):
-        s_unidades=str(unidades.cancel())
+        s_unidades=str(powdenest(unidades,force=True).cancel())
 #         if s_unidades=='1':
 #             s_unidades = ''
         return s_unidades
@@ -215,6 +218,17 @@ def exp(var):
         ans.h="exp("+var.h+")"
     return ans
 
+
+#sqrt
+def sqrt(var):
+    var = check_unidades(var) #gambiarrado
+    x=np.sqrt(var.x)
+    u= str( sympy.sqrt( parse_expr(var.u) ).cancel() )
+    ans=escalar(x,u)
+    print(f'sqrt({var}) = {ans}')
+    ans.h="sqrt("+var.h+")"
+    return ans
+#cbrt
 
 # x=dado(1,'cm')
 # y=dado(1,'m')
